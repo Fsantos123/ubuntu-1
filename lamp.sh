@@ -4,10 +4,10 @@
 # Facebook: facebook.com/ProcedimentosEmTI
 # Facebook: facebook.com/BoraParaPratica
 # YouTube: youtube.com/BoraParaPratica
-# Data de criação: 31/05/2016
-# Data de atualização: 01/10/2018
-# Versão: 0.10
-# Testado e homologado para a versão do Ubuntu Server 16.04 LTS x64
+# Data de criação: 01/11/2018
+# Data de atualização: 01/11/2018
+# Versão: 0.1
+# Testado e homologado para a versão do Ubuntu Server 16.04.x LTS x64
 # Kernel >= 4.4.x
 #
 # APACHE (Apache HTTP Server) -Servidor de Hospedagem de Páginas web
