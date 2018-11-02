@@ -76,7 +76,7 @@ then
 					 echo
 					 #
 					 echo -e "Atualizando o Sistema, aguarde..."
-					 apt -o Dpkg::Options::="--force-confold" upgrade -q -y --force-yes
+					 apt -y upgrade
 					 echo -e "Sistema Atualizado com Sucesso!!!, continuando o script..."
 					 echo
 					 #
@@ -123,7 +123,13 @@ then
 					 echo -e "Atualização feita com sucesso!!!, continuando o script..."
 					 sleep 2
 					 echo
-					 		 
+					 #
+					 echo -e "Reinicializando os serviços do Apache2, aguarde..."
+					 sudo service apache2 restart
+					 echo -e "Serviço reinicializado com sucesso!!!, continuando o script..."
+					 sleep 2
+					 echo
+					 #
 					 echo -e "Serviços instalando com sucesso!!!, pressione <Enter> para continuar com o script"
 					 read
 					 sleep 2
@@ -132,7 +138,6 @@ then
 					 echo
 					 echo -e "Instalação do LAMP-SERVER Feito com Sucesso!!!!!"
 					 echo
-					 # Script para calcular o tempo gasto para a execução do script-04.sh
 						DATAFINAL=`date +%s`
 						SOMA=`expr $DATAFINAL - $DATAINICIAL`
 						RESULTADO=`expr 10800 + $SOMA`
