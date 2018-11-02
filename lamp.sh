@@ -87,14 +87,14 @@ then
 					 echo "mysql-server-5.7 mysql-server/root_password password $PASSWORD" |  debconf-set-selections
 					 echo "mysql-server-5.7 mysql-server/root_password_again password $AGAIN" |  debconf-set-selections
 					 echo -e "Variáveis configuradas com sucesso!!!, continuando o script..."
-					 sleep 2
+					 sleep 5
 					 echo
 					 #
 					 echo -e "Instalando o LAMP Server, aguarde..."
 					 apt -y install lamp-server^ perl python links2
 					 echo -e "Instalação do LAMP-SERVER Feito com Sucesso!!!, continuando o script..."
 					 echo
-					 sleep 2
+					 sleep 5
 					 #
 					 echo -e "Instalando o PhpMyAdmin, aguarde..."
 					 echo
@@ -108,31 +108,31 @@ then
 					 echo "phpmyadmin phpmyadmin/mysql/admin-pass password $ADMIN_PASS" |  debconf-set-selections
 					 echo "phpmyadmin phpmyadmin/mysql/app-pass password $APP_PASS" |  debconf-set-selections
 					 echo -e "Variáveis configuradas com sucesso!!!, continuando o script..."
-					 sleep 2
+					 sleep 5
 					 echo
 					 #
 					 echo -e "Instalando o PhpMyAdmin, aguarde..."
 					 apt -y install phpmyadmin php-mbstring php-gettext
 					 echo -e "Instalação do PhpMyAdmin feita com sucesso!!!, continuando o script..."
-					 sleep 2
+					 sleep 5
 					 echo
 					 #				 
 					 echo -e "Atualizando as Dependências do PHP para o PhpMyAdmin, aguarde..."
 					 phpenmod mcrypt
 					 phpenmod mbstring
 					 echo -e "Atualização feita com sucesso!!!, continuando o script..."
-					 sleep 2
+					 sleep 5
 					 echo
 					 #
 					 echo -e "Reinicializando os serviços do Apache2, aguarde..."
 					 sudo service apache2 restart
 					 echo -e "Serviço reinicializado com sucesso!!!, continuando o script..."
-					 sleep 2
+					 sleep 5
 					 echo
 					 #
 					 echo -e "Serviços instalando com sucesso!!!, pressione <Enter> para continuar com o script"
 					 read
-					 sleep 2
+					 sleep 5
 					 clear
 					 #
 					 echo
