@@ -76,7 +76,7 @@ then
 					 echo
 					 
 					 echo -e "Descompactando o arquivo latest.zip, aguarde..."
-				     	 unzip latest.zip
+				     	 	unzip latest.zip
 					 echo -e "Descompactação feita com sucesso!!!, continuando o script..."
 					 sleep 2
 					 echo
