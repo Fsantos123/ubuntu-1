@@ -53,7 +53,7 @@ then
 					 WEBSERVER="apache2"
 					 ADMINUSER="root"
 					 # Exportando o recurso de Noninteractive do Debconf
-					 export DEBIAN_FRONTEND="noninteractive"
+					 	export DEBIAN_FRONTEND="noninteractive"
 					 #
 					 echo -e "Usuário é `whoami`, continuando a executar o script"
 					 echo
@@ -71,12 +71,12 @@ then
 					 echo
 					 #
 					 echo -e "Atualizando as Listas do Apt-Get, aguarde..."
-					 apt update
+					 	apt update
 					 echo -e "Listas Atualizadas com Sucesso!!!, continuando o script..."
 					 echo
 					 #
 					 echo -e "Atualizando o Sistema, aguarde..."
-					 apt -y upgrade
+					 	apt -y upgrade
 					 echo -e "Sistema Atualizado com Sucesso!!!, continuando o script..."
 					 echo
 					 #
@@ -84,14 +84,14 @@ then
 					 echo
 					 #
 					 echo -e "Configurando as variáveis do MySQL para o apt, aguarde..."
-					 echo "mysql-server-5.7 mysql-server/root_password password $PASSWORD" |  debconf-set-selections
-					 echo "mysql-server-5.7 mysql-server/root_password_again password $AGAIN" |  debconf-set-selections
-					 echo -e "Variáveis configuradas com sucesso!!!, continuando o script..."
+					 	echo "mysql-server-5.7 mysql-server/root_password password $PASSWORD" |  debconf-set-selections
+					 	echo "mysql-server-5.7 mysql-server/root_password_again password $AGAIN" |  debconf-set-selections
+					 	echo -e "Variáveis configuradas com sucesso!!!, continuando o script..."
 					 sleep 5
 					 echo
 					 #
 					 echo -e "Instalando o LAMP Server, aguarde..."
-					 apt -y install lamp-server^ perl python links2
+					 	apt -y install lamp-server^ perl python links2
 					 echo -e "Instalação do LAMP-SERVER Feito com Sucesso!!!, continuando o script..."
 					 echo
 					 sleep 5
@@ -100,32 +100,32 @@ then
 					 echo
 					 #
 					 echo -e "Configurando as váriaveis do PhpMyAdmin para o apt-get, aguarde..."
-					 echo "phpmyadmin phpmyadmin/internal/skip-preseed boolean true" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/app-password-confirm password $APP_PASSWORD" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect $WEBSERVER" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/mysql/admin-user string $ADMINUSER" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/mysql/admin-pass password $ADMIN_PASS" |  debconf-set-selections
-					 echo "phpmyadmin phpmyadmin/mysql/app-pass password $APP_PASS" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/internal/skip-preseed boolean true" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/app-password-confirm password $APP_PASSWORD" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect $WEBSERVER" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/mysql/admin-user string $ADMINUSER" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/mysql/admin-pass password $ADMIN_PASS" |  debconf-set-selections
+					 	echo "phpmyadmin phpmyadmin/mysql/app-pass password $APP_PASS" |  debconf-set-selections
 					 echo -e "Variáveis configuradas com sucesso!!!, continuando o script..."
 					 sleep 5
 					 echo
 					 #
 					 echo -e "Instalando o PhpMyAdmin, aguarde..."
-					 apt -y install phpmyadmin php-mbstring php-gettext
+					 	apt -y install phpmyadmin php-mbstring php-gettext
 					 echo -e "Instalação do PhpMyAdmin feita com sucesso!!!, continuando o script..."
 					 sleep 5
 					 echo
 					 #				 
 					 echo -e "Atualizando as Dependências do PHP para o PhpMyAdmin, aguarde..."
-					 phpenmod mcrypt
-					 phpenmod mbstring
+					 	phpenmod mcrypt
+					 	phpenmod mbstring
 					 echo -e "Atualização feita com sucesso!!!, continuando o script..."
 					 sleep 5
 					 echo
 					 #
 					 echo -e "Reinicializando os serviços do Apache2, aguarde..."
-					 sudo service apache2 restart
+					 	sudo service apache2 restart
 					 echo -e "Serviço reinicializado com sucesso!!!, continuando o script..."
 					 sleep 5
 					 echo
