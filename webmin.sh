@@ -33,7 +33,7 @@ then
 					 VERSAO="webmin_1.890_all.deb"
 					 TAMANHO="14.8 MB"
 					 #
-					 echo -e "Usuário é `whoami`, continuando a executar o Script-03.sh"
+					 echo -e "Usuário é `whoami`, continuando a executar o script"
 					 echo
 					 echo -e "Atualizando as Listas do Apt-Get, aguarde..."
 						apt update
@@ -71,7 +71,7 @@ then
 						SOMA=`expr $DATAFINAL - $DATAINICIAL`
 						RESULTADO=`expr 10800 + $SOMA`
 						TEMPO=`date -d @$RESULTADO +%H:%M:%S`
-					echo -e "Tempo gasto para execução do script-03.sh: $TEMPO"
+					echo -e "Tempo gasto para execução do script: $TEMPO"
 					echo -e "Pressione <Enter> para concluir o processo."
 					read
 					else
