@@ -44,7 +44,7 @@ then
 					 GRANTALL="GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress';"
 					 FLUSH="FLUSH PRIVILEGES;"
 					 #
-					 echo -e "Usuário é `whoami`, continuando a executar"
+					 echo -e "Usuário é `whoami`, continuando a executar o script"
 					 sleep 2
 					 echo
 					 #
